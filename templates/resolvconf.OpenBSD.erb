@@ -1,5 +1,4 @@
-# managed by puppet
 lookup file bind
-<%- resolvconf_nameservers.split(':').each do |nameserver| -%> 
-nameserver <%= nameserver %> 
+<%- resolv_nameservers.each do |nameserver| -%>
+nameserver <%= nameserver %>
 <%- end -%>
